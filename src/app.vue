@@ -1,15 +1,13 @@
 <template>
     <div class="app-container">
-        <mt-header fixed title="固定在顶部"></mt-header>
-
-
-        <van-tabbar v-model="active">
-  <van-tabbar-item icon="home-o">标签</van-tabbar-item>
-  <van-tabbar-item icon="search">标签</van-tabbar-item>
-  <van-tabbar-item icon="friends-o">标签</van-tabbar-item>
-  <van-tabbar-item icon="setting-o">标签</van-tabbar-item>
-    </van-tabbar>
-    <h1 >这是一个APP组件</h1>
+        <mt-header fixed title="嗷嗷嗷"></mt-header>
+        <router-view></router-view>
+        <van-tabbar v-model="active" route>
+          <van-tabbar-item icon="home-o" to="/home">首页</van-tabbar-item>
+          <van-tabbar-item icon="friends-o" to="/member">会员</van-tabbar-item>
+          <van-tabbar-item icon="shopping-cart-o" to="/shopcar">购物车</van-tabbar-item>
+          <van-tabbar-item icon="search" to="/search">搜索</van-tabbar-item>
+        </van-tabbar>
     </div>
 </template>
 
